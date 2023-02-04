@@ -1,36 +1,40 @@
-import { useState, UseEffect, useEffect } from "react";
-import Head from "next/head";
-import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
-import { AiFillTwitterCircle, AiFillGithub, AiFillInstagram } from "react-icons/ai";
-import { TiSocialInstagramCircular } from "react-icons/ti";
-import { Unity } from "./components/logos/Unity";
-import { Nodejs } from "./components/logos/Nodejs";
-import { Rootme } from "./components/logos/Rootme";
-import { Card } from "./components/Card";
-import { CardDeck } from "./components/CardDeck";
+import { useState, UseEffect, useEffect } from "react"
+import Head from "next/head"
+import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs"
+import {
+    AiFillTwitterCircle,
+    AiFillGithub,
+    AiFillInstagram,
+} from "react-icons/ai"
+import { TiSocialInstagramCircular } from "react-icons/ti"
+import { Unity } from "../components/logos/Unity"
+import { Nodejs } from "../components/logos/Nodejs"
+import { Rootme } from "../components/logos/Rootme"
+import { Card } from "../components/Card"
+import { CardDeck } from "../components/CardDeck"
 
 export default function Home() {
-    const [theme, setTheme] = useState(null);
+    const [theme, setTheme] = useState(null)
 
     useEffect(() => {
         if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            setTheme("dark");
+            setTheme("dark")
         } else {
-            setTheme("light");
+            setTheme("light")
         }
-    }, []);
+    }, [])
 
     useEffect(() => {
         if (theme === "dark") {
-            document.documentElement.classList.add("dark");
+            document.documentElement.classList.add("dark")
         } else {
-            document.documentElement.classList.remove("dark");
+            document.documentElement.classList.remove("dark")
         }
-    }, [theme]);
+    }, [theme])
 
     const handleThemeSwitch = () => {
-        setTheme(theme === "dark" ? "light" : "dark");
-    };
+        setTheme(theme === "dark" ? "light" : "dark")
+    }
 
     return (
         <div>
@@ -64,23 +68,31 @@ export default function Home() {
                         </ul>
                     </nav>
                     <div className="relative grid justify-center gap-12 py-3 mx-auto pattern-">
-                        {CardDeck.map(({theme, Icon, title, description, colors}) => (
-                            <Card
-                                key={theme}
-                                title={title}
-                                description={description}
-                                icon={<Icon />}
-                                color={colors}
-                            />
-                        ))}
+                        {CardDeck.map(
+                            ({ theme, Icon, title, description, colors }) => (
+                                <Card
+                                    key={theme}
+                                    title={title}
+                                    description={description}
+                                    icon={<Icon />}
+                                    color={colors}
+                                />
+                            )
+                        )}
                     </div>
                     <div className="text-5xl flex justify-center gap-16 py-3 text-gray-500 ">
-                        <a href="https://twitter.com/GUI_UVa"><AiFillTwitterCircle /></a>
-                        <a href="https://instagram.com/guiuva?igshid=YmMyMTA2M2Y="><TiSocialInstagramCircular /></a>
-                        <a href="https://github.com/GUI-UVa"><AiFillGithub /></a>
+                        <a href="https://twitter.com/GUI_UVa">
+                            <AiFillTwitterCircle />
+                        </a>
+                        <a href="https://instagram.com/guiuva?igshid=YmMyMTA2M2Y=">
+                            <TiSocialInstagramCircular />
+                        </a>
+                        <a href="https://github.com/GUI-UVa">
+                            <AiFillGithub />
+                        </a>
                     </div>
                 </section>
             </main>
         </div>
-    );
+    )
 }
