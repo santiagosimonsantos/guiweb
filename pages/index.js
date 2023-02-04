@@ -80,7 +80,7 @@ export default function Home() {
                             )
                         )}
                     </div>
-                    <div className="text-5xl flex justify-center gap-16 py-3 text-gray-500 ">
+                    <div className="sticky top-[100vh] text-5xl flex justify-center gap-16 py-6 text-gray-500 ">
                         <a href="https://twitter.com/GUI_UVa">
                             <AiFillTwitterCircle />
                         </a>
