@@ -4,9 +4,15 @@ export const Card = ({ title, description, icon, color }) => {
     const wrapper = useRef(null)
     const card = useRef(null)
 
+    const handleMouseEnter = (e) => {
+        e.preventDefault()
+        console.log(e)
+    }
+
     const handleMouseMove = (e) => {
         e.preventDefault()
         card.current.style.transition = "none"
+        card.current.style.zIndex = "30"
         const { width, height, left, top } =
             wrapper.current.getBoundingClientRect()
         const x = e.clientX - left
@@ -16,6 +22,7 @@ export const Card = ({ title, description, icon, color }) => {
         const rotationX = ((y - halfHeight) / halfHeight) * 10
         const rotationY = ((x - halfWidth) / halfWidth) * 10
         card.current.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`
+
     }
 
     const handleMouseLeave = () => {
@@ -25,13 +32,14 @@ export const Card = ({ title, description, icon, color }) => {
 
     return (
         <div
-            className="[perspective:1000px] hover:z-50"
+            className="[perspective:1000px] relative"
+            onMouseEnter={handleMouseEnter}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             ref={wrapper}
         >
             <div
-                className={`${color} cursor-pointer overflow-hidden relative block max-w-xl p-6  border-gray-200 rounded-md shadow dark:border-red-700`}
+                className={`${color} cursor-pointer overflow-hidden relative block max-w-xl p-6 border-gray-200 rounded-md shadow dark:border-red-700 z-0`}
                 ref={card}
             >
                 <div>
@@ -39,7 +47,7 @@ export const Card = ({ title, description, icon, color }) => {
                         <h5 className="mb-2 text-4xl  font-bold tracking-tight text-gray-900 dark:text-white">
                             {title}
                         </h5>
-                        <p className="font-normal text-justify bg- text-gray-700 dark:text-white text-lg p-2">
+                        <p className="font-normal text-justify text-gray-700 dark:text-white text-lg p-2">
                             {description}
                         </p>
                     </div>

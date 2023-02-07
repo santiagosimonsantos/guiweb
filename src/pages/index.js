@@ -7,11 +7,9 @@ import {
     AiFillInstagram,
 } from "react-icons/ai"
 import { TiSocialInstagramCircular } from "react-icons/ti"
-import { Unity } from "../components/logos/Unity"
-import { Nodejs } from "../components/logos/Nodejs"
-import { Rootme } from "../components/logos/Rootme"
-import { Card } from "../components/Card"
-import { CardDeck } from "../components/CardDeck"
+
+import { Card } from "@components/Card"
+import { CardDeck } from "@components/CardDeck"
 
 export default function Home() {
     const [theme, setTheme] = useState(null)
