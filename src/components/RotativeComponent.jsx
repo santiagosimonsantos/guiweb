@@ -1,11 +1,11 @@
-import { useRef } from "react"
 
-export const Card = ({ title, description, icon, color }) => {
+export const RotativeComponent = ({ children }) => {
     const wrapper = useRef(null)
     const card = useRef(null)
 
     const handleMouseEnter = (e) => {
         e.preventDefault()
+        console.log(e)
     }
 
     const handleMouseMove = (e) => {
@@ -38,22 +38,10 @@ export const Card = ({ title, description, icon, color }) => {
             ref={wrapper}
         >
             <div
-                className={`${color} cursor-pointer overflow-hidden relative block max-w-xl p-6 border-gray-200 rounded-md shadow dark:border-red-700 z-0`}
+                className="cursor-pointer overflow-hidden relative block max-w-xl p-6 border-gray-200 rounded-md shadow dark:border-red-700 z-0"
                 ref={card}
             >
-                <div>
-                    <div className="relative z-10">
-                        <h5 className="mb-2 text-4xl  font-bold tracking-tight text-gray-900 dark:text-white">
-                            {title}
-                        </h5>
-                        <p className="font-normal text-justify text-gray-700 dark:text-white text-lg p-2">
-                            {description}
-                        </p>
-                    </div>
-                    <div className="absolute opacity-30 -bottom-8 -left-16 contrast-200">
-                        {icon}
-                    </div>
-                </div>
+                {children}
             </div>
         </div>
     )

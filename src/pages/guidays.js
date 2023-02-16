@@ -7,7 +7,7 @@ import {
     AiFillInstagram,
 } from "react-icons/ai"
 import { Card } from "@components/Card"
-import { CardDeck } from "@components/CardDeck"
+import { Vision } from "@components/Vision"
 import Link from "next/link"
 
 export default function Home() {
@@ -45,12 +45,12 @@ export default function Home() {
             </Head>
             <main className="bg-white dark:bg-zinc-900 px-10">
                 <section className="min-h-screen">
-                    <nav className="py-10 flex text-center justify-between dark:bg-zinc-900 px-10">
+                <nav className="py-10 flex text-center justify-between dark:bg-zinc-900 px-10">
                         <h1 className=" text-5xl font-jetbrains dark:text-white">
                             GUI
                         </h1>
                         <div className="flex items-center ">
-                            <Link
+                        <Link
                                 href="/"
                                 className=" dark:text-white p-4 text-zinc-900 text-lg font-semibold hover:underline"
                             >
@@ -79,13 +79,12 @@ export default function Home() {
                         </ul>
                     </nav>
                     <div className="relative grid justify-center gap-12 py-3 mx-auto pattern-">
-                        {CardDeck.map(
-                            ({ theme, Icon, title, description, colors }) => (
+                        {Vision.map(
+                            ({ theme, title, description, colors }) => (
                                 <Card
                                     key={theme}
                                     title={title}
                                     description={description}
-                                    icon={<Icon />}
                                     color={colors}
                                 />
                             )

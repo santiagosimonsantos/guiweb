@@ -1,0 +1,35 @@
+[33mcommit 406801fa2d281979552c6f02f831e34e2d2cd5c6[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: santiagosimonsantos <santiago.simon.santos@gmail.com>
+Date:   Tue Feb 7 11:22:37 2023 +0100
+
+    refactor: introduce the src/ path
+
+[33mcommit 2ef9b45c03d8d1abb79467f1d258d58fb5d18492[m
+Author: santiagosimonsantos <santiago.simon.santos@gmail.com>
+Date:   Sat Feb 4 22:21:34 2023 +0100
+
+    doc: changes to README.md
+
+[33mcommit f0ea2bd1ed94926ccaae083ca9b19c8fee02f2fc[m
+Author: santiagosimonsantos <santiago.simon.santos@gmail.com>
+Date:   Sat Feb 4 22:18:41 2023 +0100
+
+    feat: footer always the bottom
+
+[33mcommit 882d8bf14fb292cff11b3bb59bac8d653ccf8dd6[m
+Author: santiagosimonsantos <santiago.simon.santos@gmail.com>
+Date:   Sat Feb 4 20:48:44 2023 +0100
+
+    refactor: allow to build the proyect
+
+[33mcommit b506a193eb7a35527785a9b10f93f7b2907713c6[m
+Author: santiagosimonsantos <santiago.simon.santos@gmail.com>
+Date:   Sat Feb 4 20:34:11 2023 +0100
+
+    my first commit
+
+[33mcommit 3cfbd08014107b19ffb072f8b78af439b8ad92c8[m
+Author: santiagosimonsantos <santiago.simon.santos@gmail.com>
+Date:   Mon Jan 30 08:36:35 2023 +0100
+
+    Initial commit from Create Next App

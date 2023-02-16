@@ -14,7 +14,7 @@ export const CardDeck = [
         theme: 'Rootme',
         Icon: Rootme,
         title: "Ciberseguridad",
-        description: "Grupo autodidacta de ciberseguridad orientado a aprendizaje autodidacta a través de las diferentes plataformas, partiendo de lo más básico hasta la más avanzado con el objetivo de presentarse a CTFSs",
+        description: "Grupo de ciberseguridad orientado al aprendizaje autodidacta a través de las diferentes plataformas, partiendo de lo más básico hasta lo más avanzado con el objetivo de presentarse a CTFSs",
         colors: "bg-red-50 dark:bg-red-400"
     },
     {
