@@ -2,12 +2,12 @@ import { Nodejs } from "./logos/Nodejs"
 import { Unity } from "./logos/Unity"
 import { Rootme } from "./logos/Rootme"
 
-export const CardDeck = [
+export const GuidaysList = [
     {
         theme: 'Nodejs',
         Icon: Nodejs,
         title: "FullStack",
-        description: "Desarrollo de aplicaciones web y móviles",
+        description: "Grupo de desarrollo web, en el que se aprende desde lo más básico hasta lo más avanzado, partiendo de HTML, CSS, JS, hasta llegar a NodeJS, React, NextJS, etc.",
         colors: "bg-emerald-50 dark:bg-emerald-300"
     },
     {
@@ -21,7 +21,7 @@ export const CardDeck = [
         theme: 'Unity',
         Icon: Unity,
         title: "Desarrollo de videojuegos",
-        description: "Desarrollo de aplicaciones web y móviles",
+        description: " En esta sección trabajamos en conjunto para aprender y desarrollar videojuegos sencillos con  en el motor unity",
         colors: "bg-zinc-50 dark:bg-zinc-400"
     }
 

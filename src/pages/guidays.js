@@ -7,7 +7,7 @@ import {
     AiFillInstagram,
 } from "react-icons/ai"
 import { Card } from "@components/Card"
-import { Vision } from "@components/Vision"
+import { VisionList } from "@componentsVisionList"
 import Link from "next/link"
 
 export default function Home() {
@@ -79,7 +79,7 @@ export default function Home() {
                         </ul>
                     </nav>
                     <div className="relative grid justify-center gap-12 py-3 mx-auto pattern-">
-                        {Vision.map(
+                        {VisionList.map(
                             ({ theme, title, description, colors }) => (
                                 <Card
                                     key={theme}

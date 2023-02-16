@@ -1,4 +1,4 @@
-export const Vision = [
+export const VisionList = [
     {
         theme: 'Nodejs',
         title: "VISIÓN DE LOS NOVATOS",
