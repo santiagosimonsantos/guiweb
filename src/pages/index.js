@@ -6,7 +6,7 @@ import {
     AiFillGithub,
     AiFillInstagram,
 } from "react-icons/ai"
-import { Card } from "@components/Card"
+import { Card } from "@componentsCard"
 import { GuidaysList } from "@componentsGuidaysList"
 import Link from "next/link"
 

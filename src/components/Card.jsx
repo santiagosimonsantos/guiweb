@@ -10,7 +10,6 @@ export const Card = ({ title, description, icon, color }) => {
 
     const handleMouseMove = (e) => {
         e.preventDefault()
-        card.current.style.transition = "none"
         card.current.style.zIndex = "30"
         const { width, height, left, top } =
             wrapper.current.getBoundingClientRect()
@@ -18,14 +17,14 @@ export const Card = ({ title, description, icon, color }) => {
         const y = e.clientY - top
         const halfWidth = width / 2
         const halfHeight = height / 2
-        const rotationX = ((y - halfHeight) / halfHeight) * 10
-        const rotationY = ((x - halfWidth) / halfWidth) * 10
+        const rotationX = (-(y - halfHeight) / halfHeight) * 8
+        const rotationY = ((x - halfWidth) / halfWidth) * 8
         card.current.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`
-
+        card.current.style.transition = "transform 0.1s"
     }
 
     const handleMouseLeave = () => {
-        card.current.style.transition = "transform 0.5s ease-in-out"
+        card.current.style.transition = "transform 0.2s"
         card.current.style.transform = "rotateX(0) rotateY(0)"
     }
 
